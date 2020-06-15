@@ -26,6 +26,8 @@
         <tr>
             <td><c:out value="${course.code}"/></td>
             <td><c:out value="${course.name}"/></td>
+            <td><c:out value="${course.credits}"/></td>
+            <td><c:out value="${course.instructor}"/></td>
             <td><button class="addBtn" type="submit">Select this course</button></td>
         </tr>
     </c:forEach>
@@ -48,6 +50,8 @@
             <td><c:out value="${loop.index+1}"/></td>
             <td><c:out value="${myCourse.code}"/></td>
             <td><c:out value="${myCourse.name}"/></td>
+            <td><c:out value="${myCourse.credits}"/></td>
+            <td><c:out value="${myCourse.instructor}"/></td>
             <td><button class="deleteBtn" type="submit">Delete this course</button></td>
         </tr>
     </c:forEach>
