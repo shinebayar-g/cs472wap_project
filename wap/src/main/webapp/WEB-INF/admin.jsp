@@ -17,7 +17,7 @@
 <body>
 
 <fieldset>
-    <legend>Demo 1</legend>
+    <legend>Course Administration</legend>
     <form>
         Course Code <input type="text" id="course_code" name="course_code"><br>
         Course Name <input type="text" id="course_name" name="course_name"><br>
@@ -34,12 +34,16 @@
             <th>Code</th>
             <th>Course Name</th>
             <th>Course Credits</th>
-            <th>Couse Instructor</th>
+            <th>Course Instructor</th>
             <th>Edit</th>
             <th>Delete</th>
         </tr>
 
     </table>
+
 </fieldset>
+<a href="logout">
+    <button>Log Out</button>
+</a>
 </body>
 </html>
