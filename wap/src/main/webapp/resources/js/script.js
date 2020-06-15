@@ -45,8 +45,9 @@
 
     function delBtnClickHandler() {
         let rowIndex = this.parentNode.parentNode.rowIndex;
-        let courseCode = document.getElementById('available_courses').rows[rowIndex].cells[0].innerHTML;
-
+     //   alert(rowIndex);
+        let courseCode = document.getElementById('myCourses').rows[rowIndex].cells[1].innerHTML;
+    //    alert(courseCode);
         $.ajax("deletecourse", {
             "type": "POST",
             "data": {

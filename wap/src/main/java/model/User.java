@@ -11,6 +11,7 @@ public class User {
     private List<Course> courses = new ArrayList<>();
 
     public User() {
+        super();
     }
 
     public User(Integer id, String username, String password,boolean isAdmin) {

@@ -33,7 +33,8 @@ public class DeleteController extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String username = (String) req.getSession().getAttribute("loggedInUser");
         User user = userDao.getUserByName(username);
-        user.deleteCourse(req.getParameter("course"));
+        String courseCode = req.getParameter("course");
+        user.deleteCourse(courseCode);
         String json = new Gson().toJson(user.getCourses());
         resp.setContentType("application/json");
         resp.setCharacterEncoding("UTF-8");
