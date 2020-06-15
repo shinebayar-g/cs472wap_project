@@ -43,7 +43,7 @@ public class CourseDAO {
         return list;
     }
 
-    public Course getCourseById(int courseId){
-        return courseDb.get(courseId);
+    public Course getCourseById(String courseCode){
+        return courseDb.get(courseCode);
     }
 }

@@ -27,25 +27,6 @@ public class AddController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//
-//        if (user == null) {
-//            Cart cart = (Cart)req.getSession().getAttribute("cart");
-//            Product product = productDao.getProductById(Integer.parseInt(req.getParameter("product")));
-//            if (cart == null) {
-//                Cart newCart = cartDao.create(product, 1);
-//                req.getSession().setAttribute("cart", newCart);
-//            } else {
-//                cart.addItem(product, 1);
-//            }
-//        }
-
-//        resp.sendRedirect("cart");
-//        if(user.hasCart()) {
-//            user.addToCart(req.getParameter("productId"));
-//        } else {
-//
-//            req.getSession().setAttribute("cart", cart);
-//        }
     }
 
     @Override
@@ -53,9 +34,10 @@ public class AddController extends HttpServlet {
         String username = (String) req.getSession().getAttribute("loggedInUser");
         User user = userDao.getUserByName(username);
 
-        List<Course> myCourses = user.getCourses();
-        Course course = courseDao.getCourseById(Integer.parseInt(req.getParameter("course")));
-        user.addCourse(course);
+        
+
+        Course course = courseDao.getCourseById(req.getParameter("course"));
+        user.getCourses().add(course);
 
         String json = new Gson().toJson(course);
         resp.setContentType("application/json");

@@ -51,4 +51,14 @@ public class User {
     public void setAdmin(boolean admin) {
         isAdmin = admin;
     }
+
+    public boolean hasCourse(String courseCode)
+    {
+        for (Course c: getCourses()) {
+            if(c.getCode().equals(courseCode))
+                return true;
+        }
+        return false;
+    }
+
 }

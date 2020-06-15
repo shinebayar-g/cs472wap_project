@@ -12,11 +12,14 @@
 
     function addBtnClickHandler() {
         let rowIndex = this.parentNode.parentNode.rowIndex;
+        let courseCode = document.getElementById('available_courses').rows[rowIndex].cells[0].innerHTML;
+       // alert(courseCode);
         console.log("adding course id to table: " + rowIndex);
+
         $.ajax("addcourse", {
             "type": "POST",
             "data": {
-                "course": rowIndex,
+                "course": courseCode,
             },
             success: function(response) {
                 console.log("added course ajax response: " + JSON.stringify(response));
