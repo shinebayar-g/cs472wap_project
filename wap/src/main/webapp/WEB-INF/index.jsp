@@ -18,6 +18,8 @@
     <tr>
         <th>Code</th>
         <th>Name</th>
+        <th>Credits</th>
+        <th>Instructor</th>
         <th>Action</th>
     </tr>
     </thead>
@@ -41,6 +43,8 @@
         <th>#</th>
         <th>Code</th>
         <th>Name</th>
+        <th>Credits</th>
+        <th>Instructor</th>
         <th>Action</th>
     </tr>
     </thead>

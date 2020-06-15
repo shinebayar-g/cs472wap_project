@@ -36,8 +36,13 @@ public class User {
         courses.add(course);
     }
 
-    public void deleteCourse(int courseNumber) {
-        courses.remove(courseNumber);
+    public void deleteCourse(String  courseCode) {
+       for(int i = 0 ; i < courses.size() ;i++ ) {
+           if (courses.get(i).getCode().equals(courseCode)) {
+               courses.remove(i);
+               break;
+           }
+       }
     }
 
     public List<Course> getCourses() {

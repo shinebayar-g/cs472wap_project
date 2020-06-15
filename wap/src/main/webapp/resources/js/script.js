@@ -29,12 +29,14 @@
     }
 
     function addToTable(course) {
-        let table = document.getElementById("myCourses").getElementsByTagName('tbody')[0];;
+        let table = document.getElementById("myCourses").getElementsByTagName('tbody')[0];
         let row = document.createElement("tr");
         row.innerHTML = `
             <td>${table.rows.length+1}</td>
             <td>${course.code}</td>
             <td>${course.name}</td>
+            <td>${course.credits}</td>
+            <td>${course.instructor}</td>
             <td><button class="deleteBtn" type="submit">Delete this course</button></td>
         `;
         table.appendChild(row);
@@ -43,10 +45,12 @@
 
     function delBtnClickHandler() {
         let rowIndex = this.parentNode.parentNode.rowIndex;
+        let courseCode = document.getElementById('available_courses').rows[rowIndex].cells[0].innerHTML;
+
         $.ajax("deletecourse", {
             "type": "POST",
             "data": {
-                "course": rowIndex,
+                "course": courseCode,
             },
             success: function() {
                 document.getElementById("myCourses").deleteRow(rowIndex);

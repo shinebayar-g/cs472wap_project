@@ -27,45 +27,16 @@ public class DeleteController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-//
-//        if (user == null) {
-//            Cart cart = (Cart)req.getSession().getAttribute("cart");
-//            Product product = productDao.getProductById(Integer.parseInt(req.getParameter("product")));
-//            if (cart == null) {
-//                Cart newCart = cartDao.create(product, 1);
-//                req.getSession().setAttribute("cart", newCart);
-//            } else {
-//                cart.addItem(product, 1);
-//            }
-//        }
-
-//        resp.sendRedirect("cart");
-//        if(user.hasCart()) {
-//            user.addToCart(req.getParameter("productId"));
-//        } else {
-//
-//            req.getSession().setAttribute("cart", cart);
-//        }
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String username = (String) req.getSession().getAttribute("loggedInUser");
         User user = userDao.getUserByName(username);
-
-        List<Course> myCourses = user.getCourses();
-        System.out.println("before delete " + myCourses);
-
-//        Course course = courseDao.getCourseById(Integer.parseInt(req.getParameter("course")));
-//        user.deleteCourse(course);
-
-        System.out.println("Deleting course id: " + (Integer.parseInt(req.getParameter("course"))-1));
-        user.deleteCourse(Integer.parseInt(req.getParameter("course"))-1);
-        System.out.println("after delete " + myCourses);
-//        String json = new Gson().toJson(course);
-//        resp.setContentType("application/json");
-//        resp.setCharacterEncoding("UTF-8");
-//        resp.getWriter().write(json);
+        user.deleteCourse(req.getParameter("course"));
+        String json = new Gson().toJson(user.getCourses());
+        resp.setContentType("application/json");
+        resp.setCharacterEncoding("UTF-8");
+        resp.getWriter().write(json);
     }
 }
