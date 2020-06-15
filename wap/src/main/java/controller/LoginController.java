@@ -24,6 +24,7 @@ public class LoginController extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String remember = request.getParameter("remember");
+        boolean isAdmin = userDao.getUserByName(username).isAdmin();
 
         if (userDao.isValidUser(username, password)) {
             HttpSession session = request.getSession();
@@ -42,7 +43,12 @@ public class LoginController extends HttpServlet {
         } else {
             request.getSession().setAttribute("err_msg", "Username or password is invalid.");
         }
-        response.sendRedirect(request.getContextPath() + "/");
+
+        if (isAdmin) {
+            response.sendRedirect(request.getContextPath() + "/admin");
+        } else {
+            response.sendRedirect(request.getContextPath() + "/");
+        }
     }
 
     @Override

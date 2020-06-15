@@ -23,8 +23,10 @@ public class UserDAO {
     Map<Integer, User> userDb = new HashMap<>();
 
     {
-        userDb.put(1, new User(1, "student1", "123"));
-        userDb.put(2, new User(2, "student2", "123"));
+        userDb.put(1, new User(1, "student1", "123",false));
+        userDb.put(2, new User(2, "student2", "123",false));
+        userDb.put(3, new User(3, "admin", "admin",true));
+
     }
 
     public void addUser(User user) {
