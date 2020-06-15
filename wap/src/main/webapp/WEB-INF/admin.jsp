@@ -17,7 +17,7 @@
 <body>
 
 <fieldset>
-    <legend>Demo 1</legend>
+    <legend>Course Registration System</legend>
     <form>
         Course Code <input type="text" id="course_code" name="course_code"><br>
         Course Name <input type="text" id="course_name" name="course_name"><br>
