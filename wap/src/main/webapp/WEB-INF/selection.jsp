@@ -15,8 +15,6 @@
 <h1>Our products</h1>
 <div id="products">Products here</div>
 
-
-
 <div>
     <a href="cart"><button id="checkout" type="submit" >Checkout</button></a>
 </div>
