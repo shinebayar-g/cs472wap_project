@@ -24,7 +24,6 @@ public class LoginController extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String remember = request.getParameter("remember");
-        boolean isAdmin = userDao.getUserByName(username).isAdmin();
 
         if (userDao.isValidUser(username, password)) {
             HttpSession session = request.getSession();
@@ -40,7 +39,7 @@ public class LoginController extends HttpServlet {
             }
             response.addCookie(c);
 
-            if (isAdmin) {
+            if (userDao.getUserByName(username).isAdmin()) {
                 session.setAttribute("isAdmin", "true");
                 response.sendRedirect(request.getContextPath() + "/admin");
             } else {
