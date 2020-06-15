@@ -27,7 +27,6 @@ public class AddController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
 //
 //        if (user == null) {
 //            Cart cart = (Cart)req.getSession().getAttribute("cart");

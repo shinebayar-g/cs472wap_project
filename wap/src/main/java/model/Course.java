@@ -29,9 +29,11 @@ public class Course {
     public Course() {
     }
 
-    public Course(String code, String name) {
+    public Course(String code, String name, String credits, String instructor) {
         this.code = code;
         this.name = name;
+        this.credits = credits;
+        this.instructor = instructor;
     }
 
     public String getCode() {

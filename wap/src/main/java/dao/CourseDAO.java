@@ -2,15 +2,19 @@ package dao;
 
 import model.Course;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class CourseDAO {
     private static CourseDAO single_instance = null;
+    private Map<String, Course> courseDb = new HashMap<>();
+    {
+        courseDb.put("CS472", new Course("CS472", "WAP","3","Ins 1"));
+        courseDb.put("CS422", new Course("CS422", "DBMS","3","Ins 1"));
+        courseDb.put("CS544", new Course("CS544", "WAA","3","Ins 1"));
+    }
 
     private CourseDAO() {
+        super();
     }
 
     public static CourseDAO CourseDAO() {
@@ -19,35 +23,27 @@ public class CourseDAO {
         return single_instance;
     }
 
-    Map<Integer, Course> courseDb = new HashMap<>();
-
-    {
-        courseDb.put(1, new Course("CS472", "WAP"));
-        courseDb.put(2, new Course("CS422", "DBMS"));
-        courseDb.put(3, new Course("CS544", "WAA"));
-    }
 
     public void addCourse(Course course) {
-        courseDb.put(genId(), course);
+        courseDb.put(course.getCode(), course);
     }
 
-    public void deleteCourse(int courseId){
-        courseDb.remove(courseId);
+    public void deleteCourse(String courseCode){
+        courseDb.remove(courseCode);
     }
 
     public void updateCourse(Course course){
-        courseDb.put(genId(), course);
+        courseDb.put(course.getCode(),course);
     }
 
     public List<Course> getAllCourses(){
-        return new ArrayList<>(courseDb.values());
+        List<Course> list;
+        Collection<Course> values = courseDb.values();
+        list = new ArrayList<Course>(values);
+        return list;
     }
 
     public Course getCourseById(int courseId){
         return courseDb.get(courseId);
-    }
-
-    public int genId() {
-        return courseDb.size()+1;
     }
 }
