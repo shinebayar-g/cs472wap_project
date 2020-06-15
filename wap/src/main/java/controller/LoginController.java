@@ -40,13 +40,15 @@ public class LoginController extends HttpServlet {
             }
             response.addCookie(c);
 
+            if (isAdmin) {
+                session.setAttribute("isAdmin", "true");
+                response.sendRedirect(request.getContextPath() + "/admin");
+            } else {
+                response.sendRedirect(request.getContextPath() + "/");
+            }
+
         } else {
             request.getSession().setAttribute("err_msg", "Username or password is invalid.");
-        }
-
-        if (isAdmin) {
-            response.sendRedirect(request.getContextPath() + "/admin");
-        } else {
             response.sendRedirect(request.getContextPath() + "/");
         }
     }

@@ -11,7 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.Console;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -29,7 +29,12 @@ public class AdminController extends HttpServlet {
         }
         else
         {
-            req.getRequestDispatcher("/WEB-INF/admin.jsp").forward(req, resp);
+            HttpSession session = req.getSession();
+            if (session.getAttribute("isAdmin") == null) {
+                resp.sendRedirect(req.getContextPath() + "/");
+            } else {
+                req.getRequestDispatcher("/WEB-INF/admin.jsp").forward(req, resp);
+            }
         }
     }
 

@@ -19,12 +19,10 @@ public class LoginFilter implements Filter {
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
         HttpServletRequest request = (HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) resp;
-//        HttpSession session = request.getSession(false);
         HttpSession session = request.getSession();
+        boolean loggedInUser = session.getAttribute("loggedInUser") != null;
 
-//        System.out.println(session.getAttribute("err_msg"));
-
-        if (session == null || session.getAttribute("loggedInUser") == null) {
+        if (!loggedInUser) {
             req.getRequestDispatcher("/WEB-INF/login.jsp").forward(req, resp);
         } else {
             chain.doFilter(req, resp);
