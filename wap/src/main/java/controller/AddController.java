@@ -34,14 +34,18 @@ public class AddController extends HttpServlet {
         String username = (String) req.getSession().getAttribute("loggedInUser");
         User user = userDao.getUserByName(username);
 
-        
-
         Course course = courseDao.getCourseById(req.getParameter("course"));
-        user.getCourses().add(course);
-
-        String json = new Gson().toJson(course);
-        resp.setContentType("application/json");
-        resp.setCharacterEncoding("UTF-8");
-        resp.getWriter().write(json);
+        if (user.hasCourse(req.getParameter("course"))) {
+            String json = "{\"code\":\"-1\"}";
+            resp.setContentType("application/json");
+            resp.setCharacterEncoding("UTF-8");
+            resp.getWriter().write(json);
+        } else {
+            user.addCourse(course);
+            String json = new Gson().toJson(course);
+            resp.setContentType("application/json");
+            resp.setCharacterEncoding("UTF-8");
+            resp.getWriter().write(json);
+        }
     }
 }
