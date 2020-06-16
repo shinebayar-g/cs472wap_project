@@ -26,6 +26,7 @@
         <br>
         <input type="button" value="Save Data" id="btnAdd">
         <input type="button" value="Save Edit Data" id="btnSaveEdit">
+        <input type="button" value="Clear" id="btnClear" name="btnClear">
         <br>
     </form>
     <table id="tbl">
