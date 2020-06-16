@@ -53,20 +53,6 @@ public class AdminController extends HttpServlet {
             JsonArray array = Helper.getItemsJSON();
             out.print(array);
         }
-        /*
-        else if(action.equals("saveupdate")) {
-            resp.setContentType("text/json");
-
-            String code = req.getParameter("course_code");
-            String name = req.getParameter("course_name");
-            String credits = req.getParameter("course_credits");
-            String instructor = req.getParameter("course_instructor");
-
-            CourseDAO.CourseDAO().updateCourse((new Course(code,name,credits,instructor)));
-            JsonArray array = Helper.getItemsJSON();
-            out.print(array);
-        }
-        */
         else if(action.equals("add"))
         {
             resp.setContentType("text/json");
