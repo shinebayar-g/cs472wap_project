@@ -53,6 +53,7 @@ public class AdminController extends HttpServlet {
             JsonArray array = Helper.getItemsJSON();
             out.print(array);
         }
+        /*
         else if(action.equals("saveupdate")) {
             resp.setContentType("text/json");
 
@@ -65,6 +66,7 @@ public class AdminController extends HttpServlet {
             JsonArray array = Helper.getItemsJSON();
             out.print(array);
         }
+        */
         else if(action.equals("add"))
         {
             resp.setContentType("text/json");

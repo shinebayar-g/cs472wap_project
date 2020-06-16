@@ -12,9 +12,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="resources/js/admin_page.js" type="text/javascript"></script>
     <link href="resources/css/admin.css" rel="stylesheet" type="text/css"/>
-
+    <script src="resources/js/admin_page.js" type="text/javascript" defer="defer"></script>
 </head>
 
 
@@ -35,7 +34,7 @@
         <input type="text" id="course_instructor" name="course_instructor" placeholder="Enter course instructor..">
 
         <input type="button" value="Save Data" id="btnAdd" class="adminbtn">
-        <input type="button" value="Save Edit Data" id="btnSaveEdit" class="adminbtn">
+        <input type="button" value="Clear" id="btnClear" name="btnClear" class="adminbtn">
         <br>
     </form>
   </div>
@@ -47,12 +46,16 @@
             <th>Code</th>
             <th>Course Name</th>
             <th>Course Credits</th>
-            <th>Couse Instructor</th>
+            <th>Course Instructor</th>
             <th>Edit</th>
             <th>Delete</th>
         </tr>
 
     </table>
 </div>
+
+<a href="logout">
+    <button>Log Out</button>
+</a>
 </body>
 </html>
