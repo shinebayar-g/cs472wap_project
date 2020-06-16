@@ -25,7 +25,7 @@
         Instructor <input type="text" id="course_instructor" name="course_instructor"><br>
         <br>
         <input type="button" value="Save Data" id="btnAdd">
-        <input type="button" value="Save Edit Data" id="btnSaveEdit">
+<%--        <input type="button" value="Save Edit Data" id="btnSaveEdit">--%>
         <input type="button" value="Clear" id="btnClear" name="btnClear">
         <br>
     </form>

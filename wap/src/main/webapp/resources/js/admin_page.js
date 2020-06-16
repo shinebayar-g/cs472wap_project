@@ -93,7 +93,7 @@ $(function () {
     /*
     * Save Edit Handler
     * */
-    $('#btnSaveEdit').click(function () {
+/*    $('#btnSaveEdit').click(function () {
         //course_code course_name course_credits course_instructor
 
         let id = $('#course_code').val();
@@ -119,7 +119,7 @@ $(function () {
         window.location.reload();
         //re build the UI elements=> Buttons
         //location.reload();
-    });
+    });*/
 
     function deleteRow(rowIndex) {
         let rowData = document.getElementById("tbl").rows[rowIndex];
