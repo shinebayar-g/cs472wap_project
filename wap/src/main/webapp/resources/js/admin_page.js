@@ -90,36 +90,6 @@ $(function () {
         window.location.reload();
     });
 
-    /*
-    * Save Edit Handler
-    * */
-/*    $('#btnSaveEdit').click(function () {
-        //course_code course_name course_credits course_instructor
-
-        let id = $('#course_code').val();
-        let name = $('#course_name').val();
-        let credit = $('#course_credits').val();
-        let instructor = $('#course_instructor').val();
-
-        $.ajax({
-            type: 'POST',
-            data: {
-                course_code: id,
-                course_name: name,
-                course_credits: credit,
-                course_instructor: instructor,
-
-                action: 'saveupdate'
-            },
-            url: 'admin',
-            success: function (result) {
-                reload(result);
-            }
-        });
-        window.location.reload();
-        //re build the UI elements=> Buttons
-        //location.reload();
-    });*/
 
     function deleteRow(rowIndex) {
         let rowData = document.getElementById("tbl").rows[rowIndex];

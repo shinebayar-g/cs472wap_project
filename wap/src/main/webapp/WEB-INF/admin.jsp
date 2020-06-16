@@ -19,7 +19,7 @@
 
 <div id="forma">
     <form>
-        <legend>Course Registration System</legend>
+        <legend class="header">Course Registration System</legend>
 
         <label for="course_code">Course Code</label>
         <input type="text" id="course_code" name="course_code" placeholder="Enter code..">
@@ -39,8 +39,10 @@
     </form>
   </div>
 
-<div>
+<div id="table">
     <table id="tbl">
+        <legend>Courses on MUM Portal</legend>
+
         <tr>
             <th>#</th>
             <th>Code</th>
@@ -55,7 +57,7 @@
 </div>
 
 <a href="logout">
-    <button>Log Out</button>
+    <button id="log">Log Out</button>
 </a>
 </body>
 </html>
