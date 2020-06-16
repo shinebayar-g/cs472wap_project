@@ -11,8 +11,6 @@ $(function () {
     }
 
     load();
-});
-
     function reload(result) {
         let JSONObjectArray = result;
         let table = document.getElementById("tbl");
@@ -49,6 +47,9 @@ $(function () {
             cell6.appendChild(deleteButton);
         }
     }
+});
+
+
 
     /*
    * Clear Form Content
