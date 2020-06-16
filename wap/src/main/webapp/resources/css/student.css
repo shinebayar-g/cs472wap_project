@@ -1,0 +1,109 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+    font-family: sans-serif;
+    /*background-image: url("https://raw.githubusercontent.com/Usamakhan007/Usamakhan007.github.io/master/bg.jpg");*/
+    background-color: ghostwhite;
+    background-repeat: inherit;
+}
+#available_courses {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 95%;
+    margin-left: 2.5%;
+    box-shadow: 5px 5px 5px 5px gray;
+}
+
+#available_courses td, #available_courses th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+
+}
+.addBtn {
+     padding: 8px 50px;
+}
+.addBtn:hover{
+    background-color: maroon;
+    color: white;
+}
+.deleteBtn {
+    padding: 8px 50px;
+}
+.deleteBtn:hover{
+    background-color: maroon;
+    color: white;
+}
+#available_courses tr:nth-child(even){background-color: #f2f2f2;}
+
+#available_courses tr:hover {background-color: #ddd;}
+
+#available_courses th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: maroon;
+    color: white;
+}
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+#myCourses {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 95%;
+    margin-left: 2.5%;
+    box-shadow: 5px 5px 5px 5px gray;
+}
+
+#myCourses td, #myCourses th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+
+}
+
+#myCourses tr:nth-child(even){background-color: #f2f2f2;}
+
+#myCourses tr:hover {background-color: #ddd;}
+
+#myCourses th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: maroon;
+    color: white;
+}
+#log{
+
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    background-color: green;
+    width: 80px;
+    height: 25px;
+    padding: 10px;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+#log:hover{
+    background-color: greenyellow;
+}
+#log a{
+    text-decoration-line: none;
+    color: white;
+    text-align: center;
+}
+#hh2 h2{
+    text-align: center;
+    margin: 15 auto;
+    color:  maroon;
+}
+#hh1 h2{
+    text-align: center;
+    margin: 15 auto;
+    color:  maroon;
+}

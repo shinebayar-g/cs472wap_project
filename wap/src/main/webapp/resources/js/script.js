@@ -38,7 +38,7 @@
             <td>${course.name}</td>
             <td>${course.credits}</td>
             <td>${course.instructor}</td>
-            <td><button class="deleteBtn" type="submit">Delete this course</button></td>
+            <td><button class="deleteBtn" type="submit">Delete Course</button></td>
         `;
         table.appendChild(row);
         row.getElementsByClassName("deleteBtn")[0].onclick = delBtnClickHandler;

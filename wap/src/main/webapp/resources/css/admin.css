@@ -1,0 +1,101 @@
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+#forma {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+    font-family: sans-serif;
+    /*background-image: url("https://raw.githubusercontent.com/Usamakhan007/Usamakhan007.github.io/master/bg.jpg");*/
+    background-color: ghostwhite;
+    background-repeat: inherit;
+}
+#tbl {
+    margin-top: 20px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 95%;
+    margin-left: 2.5%;
+    box-shadow: 5px 5px 5px 5px gray;
+}
+
+#tbl td, #tbl th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+
+}
+.addBtn {
+    padding: 8px 50px;
+}
+.addBtn:hover{
+    background-color: maroon;
+    color: white;
+}
+.deleteBtn {
+    padding: 8px 50px;
+}
+.deleteBtn:hover{
+    background-color: maroon;
+    color: white;
+}
+#tbl tr:nth-child(even){background-color: #f2f2f2;}
+
+#tbl tr:hover {background-color: #ddd;}
+
+#tbl th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: maroon;
+    color: white;
+}
+
+
+
+#forma{
+
+  padding: 10px;
+    line-height: 1.5em;
+}
+#forma legend{
+    text-align: center;
+    color: maroon;
+    font-size: 32px;
+
+}
+.adminbtn{
+    padding: 8px 50px;
+}
+.adminbtn:hover{
+    background-color: maroon;
+    color: white;
+}

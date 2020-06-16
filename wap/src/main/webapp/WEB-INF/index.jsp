@@ -7,13 +7,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CS472 WAP Project - Course registration system</title>
-    <link href="resources/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="resources/css/student.css" rel="stylesheet" type="text/css"/>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="resources/js/script.js"></script>
 </head>
+
 <body>
-<h1>Available courses</h1>
-<table id="available_courses">
+<div id="hh1"><h2>Available courses</h2></div>
+     <table id="available_courses">
     <thead>
     <tr>
         <th>Code</th>
@@ -30,13 +31,15 @@
             <td><c:out value="${course.name}"/></td>
             <td><c:out value="${course.credits}"/></td>
             <td><c:out value="${course.instructor}"/></td>
-            <td><button class="addBtn" type="submit">Select this course</button></td>
+            <td><button class="addBtn" type="submit">Select Course</button></td>
         </tr>
-    </c:forEach>
-    </tbody>
-</table>
+         </c:forEach>
+       </tbody>
+     </table>
 
-<h2>My courses</h2>
+
+
+<div id="hh2"><h2>My courses</h2></div>
 <table id="myCourses">
     <thead>
     <tr>
@@ -56,16 +59,15 @@
             <td><c:out value="${myCourse.name}"/></td>
             <td><c:out value="${myCourse.credits}"/></td>
             <td><c:out value="${myCourse.instructor}"/></td>
-            <td><button class="deleteBtn" type="submit">Delete this course</button></td>
+            <td><button class="deleteBtn" type="submit">Delete Course</button></td>
         </tr>
     </c:forEach>
     </tbody>
 </table>
 
 
-<a href="logout">
-    <button>Log Out</button>
-</a>
+    <div id="log"> <a href="logout" <button>Log Out</button> </a> </div>
+
 
 </body>
 </html>
