@@ -12,6 +12,7 @@ public class Helper
     public static JsonArray getItemsJSON(){
         JsonArray objToReturn = new JsonArray();
         List<Course> Courses = CourseDAO.CourseDAO().getAllCourses();
+
         for(int i = 0; i < Courses.size() ; i++){
             Course itm = Courses.get(i);
             JsonObject objToAdd = new JsonObject();
