@@ -136,7 +136,7 @@ body{
     margin-bottom: 5px;
 }
 #log:hover{
-    background-color: greenyellow;
+    background-color: maroon;
 }
 #log a{
     text-decoration-line: none;
