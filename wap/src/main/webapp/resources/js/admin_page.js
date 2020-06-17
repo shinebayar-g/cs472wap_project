@@ -55,7 +55,7 @@ function reload(result) {
         cell6.appendChild(deleteButton);
     }
 
-   // window.location.reload();
+    // window.location.reload();
 }
 
 /*
