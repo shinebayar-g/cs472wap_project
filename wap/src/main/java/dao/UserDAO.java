@@ -25,8 +25,8 @@ public class UserDAO {
     {
         userDb.put(1, new User(1, "student1", "123",false));
         userDb.put(2, new User(2, "student2", "123",false));
-        userDb.put(3, new User(3, "admin", "admin",true));
-
+        userDb.put(3, new User(3, "student3", "123",false));
+        userDb.put(4, new User(4, "admin", "admin",true));
     }
 
     public void addUser(User user) {
