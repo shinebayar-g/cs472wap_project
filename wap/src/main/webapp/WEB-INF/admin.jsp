@@ -30,7 +30,7 @@
         <label for="course_credits">Course Credits</label>
         <input type="text" id="course_credits" name="course_credits" placeholder="Enter credits..">
 
-        <label for="course_instructor">Course Name</label>
+        <label for="course_instructor">Instructor Name</label>
         <input type="text" id="course_instructor" name="course_instructor" placeholder="Enter course instructor..">
 
         <input type="button" value="Save Data" id="btnAdd" class="adminbtn">
