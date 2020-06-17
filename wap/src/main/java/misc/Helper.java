@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Helper
 {
-    public static JsonArray getItemsJSON(){
+    public static JsonArray getCoursesJSON(){
         JsonArray objToReturn = new JsonArray();
         List<Course> Courses = CourseDAO.CourseDAO().getAllCourses();
 

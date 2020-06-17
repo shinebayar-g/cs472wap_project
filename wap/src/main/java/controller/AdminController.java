@@ -22,7 +22,7 @@ public class AdminController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if(req.getParameter("type") != null)
         {
-            JsonArray array = Helper.getItemsJSON();
+            JsonArray array = Helper.getCoursesJSON();
             resp.setContentType("text/json");
             PrintWriter out = resp.getWriter();
             out.print(array);
@@ -50,7 +50,7 @@ public class AdminController extends HttpServlet {
             resp.setContentType("text/json");
             //Delete object to the DATABASE
             CourseDAO.CourseDAO().deleteCourse(selectedCourse);
-            JsonArray array = Helper.getItemsJSON();
+            JsonArray array = Helper.getCoursesJSON();
             out.print(array);
         }
         else if(action.equals("add"))
@@ -62,7 +62,7 @@ public class AdminController extends HttpServlet {
             String instructor = req.getParameter("course_instructor");
             //Add object to the DATABASE
             CourseDAO.CourseDAO().addCourse(new Course(code,name,credits,instructor));
-            JsonArray array = Helper.getItemsJSON();
+            JsonArray array = Helper.getCoursesJSON();
             out.print(array);
         }
     }
